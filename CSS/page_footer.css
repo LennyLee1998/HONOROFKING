@@ -1,0 +1,65 @@
+.footer{
+  height: 362px;
+}
+.wrapper{
+  position: relative;
+  top: 50%;
+  transform: translate(0,-50%);
+  height: 196px;
+}
+.footer .logo-area{
+  height: 78px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #d4d4d4;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+.footer .logo-area .logo{
+  height: 66px;
+  line-height: 66px;
+}
+.footer .logo-area .logo a{
+  display: inline-block;
+  height: 64px;
+  text-indent: -9999px;
+  background: url(../img/footer-sprite.png) no-repeat;
+}
+.footer .logo-area .logo a.tencent{
+  width: 285px;
+  background-position: 0 0;
+
+}
+.footer .logo-area .logo a.timi{
+  width: 70px;
+  background-position: -285px 0;
+}
+
+.footer .info{
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  font-size: 12px;
+  color: #666;
+}
+.footer .info .info-left{
+  width: 508px;
+}
+.footer .info .desc{
+  display: flex;
+  justify-content: space-between;
+  margin-top:6px ;
+}
+.footer .info .info-right{
+  width: 650px;
+}
+.footer .info .info-right a{
+  font-size: 12px;
+  color: #666;
+}
+
+.footer .info .info-right .article a.icon img{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 2px;
+}

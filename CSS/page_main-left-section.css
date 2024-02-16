@@ -1,0 +1,54 @@
+.main .content-section .left-content .match-center .match-news{
+  display: flex;
+  margin:19px 0 15px ;
+  height: 260px;
+
+}
+.main .content-section .left-content .match-center .match-news .news-left{
+  width: 211px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: orange;
+  
+}
+.main .content-section .left-content .match-center .match-news .news-right{
+  flex: 1;
+  overflow: hidden;
+  padding: 0 19px;
+  /* background-color: purple; */
+}
+.main .content-section .left-content .match-center .match-news .news-right .title{
+  display: block;
+  height: 66px;
+  padding-right: 50px;
+  font-size: 24px;
+  color: #333;
+}
+.main .content-section .left-content .match-center .match-news .news-right .title .maintitle:hover{
+  text-decoration: underline;
+}
+.main .content-section .left-content .match-center .match-news .news-right .title .subtitle{
+  padding-right: 110px;
+  font-size: 14px;
+  color: #666;
+}
+.main .content-section .left-content .match-center .match-news .news-right .news-list .item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+.main .content-section .left-content .match-center .match-news .news-right .news-list .item .desc{
+  flex: 1;
+  padding-right:50px ;
+  color: #333;
+
+}
+.main .content-section .left-content .match-center .match-news .news-right .news-list .item .desc:hover{
+  text-decoration: underline;
+}
+
+.main .content-section .left-content .match-center .match-news .news-right .news-list .item .date{
+  font-size: 12px;
+  color: #b8b9c5;
+
+}

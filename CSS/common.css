@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/* common.css公共样式 */
+
+/* body的公共样式 */
+body {
+  font: 14px/1.5 "Microsoft YaHei", Tahoma, "simsun", sans-serif;
+  color: #333;
+
+  min-width: 1300px;
+}
+
+/* 顶部的居中可能在很多其他地方还会复用，抽离出来 */
+/* rapper中间包裹的内容 */
+.top_wrapper {
+  width: 980px;
+  margin: 0 auto;
+
+}
+
+.header_wrapper {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.main_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* 文字不换行显示省略号 */
+.nowrap_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 新闻类型的图标 */
+.news_type::before {
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 2px;
+  margin-right: 2px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+
+
+}
+
+.news_type_hot::before {
+  content: "热门";
+  color: #ff3636;
+}
+
+.news_type_notice::before {
+  content: "公告";
+  color: #f4be19;
+}
+
+.news_type_news::before {
+  content: "新闻";
+  color: #1e96ab;
+}
+
+.news_type_match {
+  display: block;
+  width: 52px;
+  height: 23px;
+  border-radius: 10px;
+  margin-right: 12px;
+  line-height: 23px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  background-color: #e3e3e3;
+}
+
+
+
+/* content部分的header */
+.section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* .section_header .header_left{
+} */
+.section_header .header_left .title {
+  padding-left: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  /* 比作定位元素?i要简单很多 */
+  /* 但是如果包裹的元素比较长,就不适用,会把后面的图标露出来 */
+  background: url(../img/main-sprite.png) no-repeat 0 -102px;
+}
+
+.section_header .header_left .title-icon-match {
+  background-position: 0 -181px;
+}
+
+.section_header .header_left .title-icon-hero {
+  background-position: 0 -139px;
+}
+
+.section_header .header_left .title-icon-KPL {
+  background-position: -157px -102px;
+}
+
+.section_header .header_right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .section_header .header_right{} */
+.section_header .header_right .more {
+  display: block;
+  padding-left: 24px;
+  color: #999;
+  background: url(../img/main-sprite.png) no-repeat -252px 4px;
+}
+
+.section_header .header_right .more:hover {
+  color: #f3c258;
+}
+
+/* tab_control样式 */
+.tab_control {
+  display: flex;
+  /* 垂直居中 */
+  align-items: center;
+  height: 32px;
+  line-height: 29px;
+  background-color: #f5f5f5;
+}
+
+.tab_control>.item {
+  flex: 1;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+}
+
+.tab_control>.item.item_wrap {
+  /* 这里会碰到flex-basis的问题导致不能正常包裹内容,需要将其设置为auto */
+  flex: 0 auto;
+  padding: 0 27px;
+}
+
+.tab_control>.item:hover,
+.tab_control>.item.active {
+  border-bottom-color: #f3c258;
+  color: #333;
+}
+
+.tab_control>.line {
+  width: 1px;
+  height: 20px;
+  background-color: #e1e1e1;
+}
+
+/* tab_keyword样式 */
+.tab_keyword {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 13px;
+}
+
+.tab_keyword>.item {
+  height: 24px;
+  padding: 0 13px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  line-height: 24px;
+  /* text-indent: 8px; */
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.tab_keyword>.item:hover,
+.tab_keyword>.item.active {
+  border-color: #f3c258;
+  background-color: #f3c258;
+  color: #fff;
+}
+
+/* icon_type */
+.icon_type::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/main-sprite.png) no-repeat;
+}
+
+.icon_type_hot::before {
+  background-position: -163px -68px;
+}
+
+.icon_type_fans::before {
+  background-position: -137px -68px;
+}
+.icon_type_guard::before{
+  background-position: -136px -5px;
+}

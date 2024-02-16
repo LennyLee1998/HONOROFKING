@@ -1,0 +1,99 @@
+.video_list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.video_list .video_item{
+  display: block;
+  width: 212px;
+  /* background-color:orange; */
+  margin-bottom: 30px;
+}
+.video_list .video_item .album{
+  position: relative;
+  width: 209px;
+  border-radius: 5px;
+  /* 会有超出部分,所以需要隐藏 */
+  overflow: hidden;
+}
+.video_list .video_item .album img{
+  width: 100%;
+}
+.video_list .video_item .album .info{
+  /* 决定整个元素的位置 */
+  position: absolute;
+  bottom: 0;
+  /* width: 100%; */
+  left: 0;
+  right: 0;
+  /* 决定元素内部的东西 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 22px;
+  padding-right:10px;
+  padding-left: 10px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #fff;
+  background-color:  rgba(0,0,0,.6);
+}
+
+.video_list .video_item .album .info .info_count{
+  padding-left: 15px;
+  background: url(../img/main-sprite.png) no-repeat -256px -59px;
+  
+}
+.video_list .video_item .album .cover{
+  /* 为none时在结构中存在,但是根本不会渲染,而transition为起始状态到终点状态的变化过程,如果从none到block,就根本没有起始状态*/
+  display: none;
+  /* opacity: 0; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:  rgba(0,0,0,.6);
+  
+  /* transition:all 300ms ease-in; */
+ 
+}
+.video_list .video_item:hover .album .cover{
+  display: block;
+  /* opacity: 1; */
+  animation: itemCoverAnim 500ms ease-in forwards;
+
+}
+@keyframes itemCoverAnim {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
+.video_list .video_item .album .cover .play{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  background: url(../img/main-sprite.png) no-repeat -192px -64px;
+}
+.video_list .video_item .desc{
+  margin-top: 10px;
+  color: #333;
+
+  /* 多行省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* 限制几行 */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

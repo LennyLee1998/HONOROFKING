@@ -1,0 +1,177 @@
+.news-section {
+  /* 由于flex的align-items的默认值为normal，即stretch，所以其子元素有height */
+  display: flex;
+  height: 342px;
+  /* 背景部分 */
+  background: url(../img/news_bg.png) no-repeat;
+}
+/* news-section分为了三部分，建议先将三个部分划分好，分别赋以不同的背景颜色，方便区分 */
+.news-section .banner {
+  width: 605px;
+  background-color:#000;
+}
+
+.news-section .banner .image-list{
+  /* 之后做轮播的时候用transform:translate加上transition即可 */
+  display: flex;
+  width: 604px;
+  overflow: hidden;
+}
+.news-section .banner .image-list .item{
+  flex-shrink: 0;
+  width: 100%;
+}
+.news-section .banner .image-list .item a{
+  display: block;
+}
+.news-section .banner .image-list .item a img{
+  width: 100%;
+}
+.news-section .banner .title-list{
+  display: flex;
+  height: 44px;
+  line-height: 44px;
+  
+}
+.news-section .banner .title-list .item{
+  flex-grow: 1;
+  text-align: center;
+}
+.news-section .banner .title-list .item a{
+  display: block;
+  font-size: 14px;
+  color: #b1b2be;
+}
+.news-section .banner .title-list .item.active a,
+.news-section .banner .title-list .item a:hover{
+  color:#f3c258 ;
+  background-color: rgba(255,255,255,0.15);
+}
+.news-section .news {
+  /* 弹性布局：如果main_wrapper的宽度有天变了，news的宽度也可以弹性变化 */
+  flex: 1; 
+  padding:0 17px;
+  /* background-color: rgba(255,255,255,0.15); */
+  overflow: hidden;
+ 
+}
+.news-section .news .title-list{
+  display: flex;
+  height: 48px;
+  line-height: 48px;
+  /* 子元素占的好像是父元素的content的一行*/
+  border-bottom: 1px solid #000;
+  
+}
+.news-section .news .title-list .item{
+  width: 52px;
+}
+.news-section .news .title-list .item a{
+  display:block;
+  height: 48px;
+  box-sizing: border-box;
+  line-height: 45px;
+  color: #b8b9c5;
+  text-align: center;
+  
+  /* transition:property duration timing-function */
+  transition: border-list 150ms linear;
+}
+/* 否定伪类 */
+.news-section .news .title-list .item:not(.more) a:hover,
+.news-section .news .title-list .active a{
+  border-bottom: 3px solid#f3c258;
+  color:#f3c258;
+}
+
+/* .news-section .news .title-list .item.more a:hover{
+  
+  color: #b8b9c5;
+  border-list-color: transparent;
+} */
+.news-section .news .notice{
+  height: 36px;
+  padding: 0 15px;
+  margin:18px 0 11px;
+  line-height: 36px;
+  background-color: #414046;
+}
+.news-section .news .notice>a{
+  /* 不是block就不能继承line-height吗？
+  行内元素可以继承父元素的行高
+但是两者的产生的情况不一样，block会撑起整个父元素，
+但是行内元素只能包裹内容
+  */
+  display: block;
+  /* a元素作为行内非替换元素不能设置宽度，当设置block时，可以设置宽度 */
+  /* width: 230px; */
+  /* 用padding来限制内容部分比写死width要好 */
+  padding-right: 60px;
+  font-size: 18px;
+  color: #f3c258;
+  
+}
+.news-section .news .news-list{
+  /* margin-left: 39px; */
+  font-size: 14px;
+}
+.news-section .news .news-list .item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+  
+}
+.news-section .news .news-list .item .desc{
+  flex: 1;
+  overflow: hidden;
+  padding-right: 50px;
+  color: #b8b9c5;
+}
+
+.news-section .news .news-list .item .date{
+  padding: 0 0 0 8px;
+  color: #999;
+  font-size: 12px;
+}
+/* .news-section .news .news-list .item::before{
+  热门这样做会导致不在a元素中
+  content:"热门" ;
+  width: 32px;
+  height: 16px;
+  border: 1px solid #ff3636;
+  margin: 2px 5px 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #ff3636;
+  cursor: pointer;
+}
+ */
+.news-section .news .news-list .item a{
+  width: 230px;
+  
+}
+.news-section .download {
+  width: 236px;
+  background-color: skyblue;
+}
+.news-section .download a{
+  display: block;
+  /* 已经独占一行，不需要设置宽度 */
+  /* width: 236px; */
+  /* 把精灵图也放置在公共的部分 */
+  background: url(../img/download-sprite.png) no-repeat;
+}
+.news-section .download a.download-btn{
+  height: 128px;
+  background-position: 0 -219px ;
+ 
+}
+.news-section .download a.guard-btn{
+  height: 106px;
+  background-position:0 -350px;
+}
+.news-section .download a.experience-btn{
+  height: 108px;
+  background-position:0 -461px;
+}

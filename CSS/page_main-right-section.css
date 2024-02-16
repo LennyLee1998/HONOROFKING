@@ -1,0 +1,119 @@
+.main .content-section .right-content .hero-skin .new-hero{
+  margin-top: 19px;
+  margin-bottom: 12px;
+}
+.main .content-section .right-content .hero-skin .new-hero .album{
+  display: block;
+}
+.main .content-section .right-content .hero-skin .new-hero .intro{
+  height: 47px;
+  padding: 10px 15px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+.main .content-section .right-content .hero-skin .new-hero .intro .name{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.main .content-section .right-content .hero-skin .new-hero .intro .date{
+  font-size: 12px;
+  color: #999;
+}
+.main .content-section .right-content .hero-skin .hero-list{
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+.main .content-section .right-content .hero-skin .hero-list .item{
+  position: relative;
+  display: block;
+}
+.main .content-section .right-content .hero-skin .hero-list .item .cover{
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 14px;
+  color: #f3c258;
+  writing-mode: vertical-lr;
+  letter-spacing: 0.3em;
+  background-color:rgba(0,0,0,0.88);
+  transition: opacity 500ms ease-in;
+}
+.main .content-section .right-content .hero-skin .hero-list .item:hover .cover{
+  opacity: 1;
+}
+.main .content-section .right-content .kpl-schedule{
+  margin-top: 40px;
+
+}
+.main .content-section .right-content .kpl-schedule .section_header{
+  margin-bottom: 16px;
+
+}
+.main .content-section .right-content .kpl-schedule .section_header .header_right .ticket{
+  display: block;
+  width: 70px;
+  height: 22px;
+  box-sizing: border-box;
+  /* text-indent:22px; */
+  padding-left: 22px;
+  border: 1px solid #f3c258;
+  border-radius: 3px;
+  margin-right:20px ;
+  line-height: 22px;
+  text-align: center;
+  color: #323235;
+  background: url(../img/main-sprite.png) no-repeat -243px -85px;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time{
+  width: 100%;
+  margin-bottom: 21px;
+  text-align: center;
+  /* 合并单元格 */
+  border-collapse: collapse;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time thead tr{
+  background-color: #f5f5f5;
+  height: 29px;
+  line-height: 29px;
+  color: #999;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time tbody tr{
+  border-bottom: 1px solid #e5e5e5;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time tbody td{
+  font-size: 12px;
+  padding: 10px 0;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time tbody .team{
+  margin-bottom:5px ;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time tbody img{
+  width: 25px;
+  height: 25px;
+}
+.main .content-section .right-content .kpl-schedule .schedule-time td:nth-child(2),
+.main .content-section .right-content .kpl-schedule .schedule-time td:nth-child(4){
+  width: 81px;
+}
+
+.main .content-section .right-content .kpl-schedule .schedule-time td:nth-child(3){
+  color:#f3c258 ;
+  font-size: 14px;
+}
+.main .content-section .right-content .kpl-schedule .match-schedule{
+  display: block;
+  
+}
+.main .content-section .right-content .kpl-schedule .match-schedule img{
+  border-radius: 2px;
+}

@@ -1,0 +1,27 @@
+.main{
+  /* width: 100%; */
+  /* height:1300px; */
+  background: url(../img/big-bg.jpg) no-repeat top center/100%;
+}
+.main .link{
+  display: block;
+  width: 1200px;
+  height: 440px;
+  margin: 6px auto 10px;
+  /* background-color: #f00; */
+}
+
+/* 内容区域 */
+.main .content-section {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.main .content-section .left-content {
+  width: 872px;
+}
+
+.main .content-section .right-content {
+  width: 295px;
+}
